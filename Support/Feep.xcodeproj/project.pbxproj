@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7300C305212110DB00179ACE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300C304212110DB00179ACE /* Result.swift */; };
+		7300C308212117A100179ACE /* ResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300C3062121178000179ACE /* ResultTests.swift */; };
+		7309DEC42120AD400024C26A /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7309DEC32120AD400024C26A /* Curry.swift */; };
+		7309DECA2120C6D80024C26A /* BlueLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7309DEC92120C6D80024C26A /* BlueLine.framework */; };
 		733A8C42205F011E0028AF3C /* Feep.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 733A8C38205F011D0028AF3C /* Feep.framework */; };
 		733A8C47205F011E0028AF3C /* FeepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A8C46205F011E0028AF3C /* FeepTests.swift */; };
 		733A8C53205F02210028AF3C /* ForwardApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A8C52205F02210028AF3C /* ForwardApplication.swift */; };
@@ -25,6 +29,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7300C30321210F1100179ACE /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7300C304212110DB00179ACE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		7300C3062121178000179ACE /* ResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTests.swift; sourceTree = "<group>"; };
+		7309DEC32120AD400024C26A /* Curry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
+		7309DEC72120C4FA0024C26A /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; name = Cartfile.private; path = ../Cartfile.private; sourceTree = "<group>"; };
+		7309DEC92120C6D80024C26A /* BlueLine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BlueLine.framework; path = ../Carthage/Build/iOS/BlueLine.framework; sourceTree = "<group>"; };
 		733A8C38205F011D0028AF3C /* Feep.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Feep.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		733A8C3C205F011E0028AF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		733A8C41205F011E0028AF3C /* FeepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7309DECA2120C6D80024C26A /* BlueLine.framework in Frameworks */,
 				733A8C42205F011E0028AF3C /* Feep.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,14 +65,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7309DEC82120C6D80024C26A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7309DEC92120C6D80024C26A /* BlueLine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		733A8C2E205F011D0028AF3C = {
 			isa = PBXGroup;
 			children = (
+				7300C30321210F1100179ACE /* Playground.playground */,
+				7309DEC72120C4FA0024C26A /* Cartfile.private */,
 				733A8C3C205F011E0028AF3C /* Info.plist */,
 				733A8C48205F011E0028AF3C /* TestsInfo.plist */,
 				733A8C3A205F011D0028AF3C /* Sources */,
 				733A8C45205F011E0028AF3C /* Tests */,
 				733A8C39205F011D0028AF3C /* Products */,
+				7309DEC82120C6D80024C26A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +102,8 @@
 				733A8C52205F02210028AF3C /* ForwardApplication.swift */,
 				733A8C54205F037A0028AF3C /* ForwardCompose.swift */,
 				C1583C7E20785D88006CEFA2 /* Bind.swift */,
+				7309DEC32120AD400024C26A /* Curry.swift */,
+				7300C304212110DB00179ACE /* Result.swift */,
 			);
 			name = Sources;
 			path = ../Sources;
@@ -89,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				733A8C46205F011E0028AF3C /* FeepTests.swift */,
+				7300C3062121178000179ACE /* ResultTests.swift */,
 			);
 			name = Tests;
 			path = ../Tests;
@@ -205,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				733A8C55205F037A0028AF3C /* ForwardCompose.swift in Sources */,
+				7300C305212110DB00179ACE /* Result.swift in Sources */,
 				C1583C7F20785D89006CEFA2 /* Bind.swift in Sources */,
 				733A8C53205F02210028AF3C /* ForwardApplication.swift in Sources */,
+				7309DEC42120AD400024C26A /* Curry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7300C308212117A100179ACE /* ResultTests.swift in Sources */,
 				733A8C47205F011E0028AF3C /* FeepTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,11 +434,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4565GL3HE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TestsInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcmxcix.FeepTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,11 +458,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4565GL3HE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TestsInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcmxcix.FeepTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

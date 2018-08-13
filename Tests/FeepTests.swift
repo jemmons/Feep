@@ -1,5 +1,6 @@
 import XCTest
 import Foundation
+import BlueLine
 import Feep
 
 
@@ -15,21 +16,46 @@ private enum Helper {
 
 class FeepTests: XCTestCase {
   func testApplication() {
-    XCTAssertEqual("FOO", "foo" |> Helper.upcase)
-    XCTAssertEqual("fooize", "foo" |> Helper.izify)
+    EQ("FOO", "foo" |> Helper.upcase)
+    EQ("fooize", "foo" |> Helper.izify)
   }
   
   
   func testComposition() {
-    XCTAssertEqual("FOOize", "foo" |> Helper.upcase >>> Helper.izify)
-    XCTAssertEqual("FOOIZE", "foo" |> Helper.izify >>> Helper.upcase)
+    EQ("FOOize", "foo" |> Helper.upcase >>> Helper.izify)
+    EQ("FOOIZE", "foo" |> Helper.izify >>> Helper.upcase)
   }
   
   
   func testBind() {
     let some: String? = "http://example.com"
     let none: String? = nil
-    XCTAssertEqual("http://example.com", (some ?= URL.init)!.absoluteString)
-    XCTAssertNil(none ?= URL.init)
+    EQ("http://example.com", (some ?= URL.init)!.absoluteString)
+    NIL(none ?= URL.init)
+  }
+  
+  
+  func testCurry() {
+    let subject = curry(String.init(data:encoding:))
+    T(subject is (Data)->(String.Encoding)->String?)
+    
+    let data = Data("foo".utf8)
+    EQ(subject(data)(.utf8), "foo")
+  }
+  
+  
+  func testFlip() {
+    let subject = flip(curry(String.init(data:encoding:)))
+    T(subject is (String.Encoding)->(Data)->String?)
+    
+    let data = Data("foo".utf8)
+    EQ(subject(.utf8)(data), "foo")
+  }
+  
+  
+  func testZurry() {
+    let subject = zurry("foo".uppercased)
+    T(subject is String)
+    EQ(subject, "FOO")
   }
 }
