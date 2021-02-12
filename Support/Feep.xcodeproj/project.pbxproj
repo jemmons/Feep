@@ -16,6 +16,9 @@
 		733A8C53205F02210028AF3C /* ForwardApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A8C52205F02210028AF3C /* ForwardApplication.swift */; };
 		733A8C55205F037A0028AF3C /* ForwardCompose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A8C54205F037A0028AF3C /* ForwardCompose.swift */; };
 		C1583C7F20785D89006CEFA2 /* Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1583C7E20785D88006CEFA2 /* Bind.swift */; };
+		C1F7A11921F398FC003C4649 /* Continuations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F7A11821F398FC003C4649 /* Continuations.swift */; };
+		C1F7A11C21F39918003C4649 /* ContinuationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F7A11A21F39912003C4649 /* ContinuationsTests.swift */; };
+		C1F7A13621F4BC0D003C4649 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F7A13521F4BC0D003C4649 /* Overture.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		733A8C52205F02210028AF3C /* ForwardApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardApplication.swift; sourceTree = "<group>"; };
 		733A8C54205F037A0028AF3C /* ForwardCompose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardCompose.swift; sourceTree = "<group>"; };
 		C1583C7E20785D88006CEFA2 /* Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bind.swift; sourceTree = "<group>"; };
+		C1F7A11821F398FC003C4649 /* Continuations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continuations.swift; sourceTree = "<group>"; };
+		C1F7A11A21F39912003C4649 /* ContinuationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationsTests.swift; sourceTree = "<group>"; };
+		C1F7A13521F4BC0D003C4649 /* Overture.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Overture.framework; path = ../Carthage/Build/iOS/Overture.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F7A13621F4BC0D003C4649 /* Overture.framework in Frameworks */,
 				7309DECA2120C6D80024C26A /* BlueLine.framework in Frameworks */,
 				733A8C42205F011E0028AF3C /* Feep.framework in Frameworks */,
 			);
@@ -68,6 +75,7 @@
 		7309DEC82120C6D80024C26A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1F7A13521F4BC0D003C4649 /* Overture.framework */,
 				7309DEC92120C6D80024C26A /* BlueLine.framework */,
 			);
 			name = Frameworks;
@@ -104,6 +112,7 @@
 				C1583C7E20785D88006CEFA2 /* Bind.swift */,
 				7309DEC32120AD400024C26A /* Curry.swift */,
 				7300C304212110DB00179ACE /* Result.swift */,
+				C1F7A11821F398FC003C4649 /* Continuations.swift */,
 			);
 			name = Sources;
 			path = ../Sources;
@@ -114,6 +123,7 @@
 			children = (
 				733A8C46205F011E0028AF3C /* FeepTests.swift */,
 				7300C3062121178000179ACE /* ResultTests.swift */,
+				C1F7A11A21F39912003C4649 /* ContinuationsTests.swift */,
 			);
 			name = Tests;
 			path = ../Tests;
@@ -231,6 +241,7 @@
 			files = (
 				733A8C55205F037A0028AF3C /* ForwardCompose.swift in Sources */,
 				7300C305212110DB00179ACE /* Result.swift in Sources */,
+				C1F7A11921F398FC003C4649 /* Continuations.swift in Sources */,
 				C1583C7F20785D89006CEFA2 /* Bind.swift in Sources */,
 				733A8C53205F02210028AF3C /* ForwardApplication.swift in Sources */,
 				7309DEC42120AD400024C26A /* Curry.swift in Sources */,
@@ -242,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7300C308212117A100179ACE /* ResultTests.swift in Sources */,
+				C1F7A11C21F39918003C4649 /* ContinuationsTests.swift in Sources */,
 				733A8C47205F011E0028AF3C /* FeepTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

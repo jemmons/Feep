@@ -13,31 +13,33 @@ func get(url: URL, completion: (Result<JSON>)->Void) {
 }
 
 
-func fetchInt1(completion: (Result<Int>)->Void) {
-  let url = URL(string: "http://example.com")!
-  get(url: url) { res in
-    switch res {
-    case .success(let json):
-      completion(.success(json["value"]!))
-    case .failure(let e):
-      completion(.failure(e))
-    }
-  }
-}
-
-
-func fetchInt2(completion: (Result<Int>)->Void) {
-  let url = URL(string: "http://example.com")!
-  get(url: url) { res in
-    completion(res.flatMap { json in
-      .success(json["value"]!)
-    })
-  }
-}
-
+//func fetchInt1(completion: (Result<Int>)->Void) {
+//  let url = URL(string: "http://example.com")!
+//  get(url: url) { res in
+//    switch res {
+//    case .success(let json):
+//      completion(.success(json["value"]!))
+//    case .failure(let e):
+//      completion(.failure(e))
+//    }
+//  }
+//}
+//
+//
+//func fetchInt2(completion: (Result<Int>)->Void) {
+//  let url = URL(string: "http://example.com")!
+//  get(url: url) { res in
+//    completion(res.flatMap { json in
+//      .success(json["value"]!)
+//    })
+//  }
+//}
+//
 
 func fetchInt(completion: (Result<Int>)->Void) {
   let url = URL(string: "http://example.com")!
+  
+
   
 //  get(URL, (Result<JSON>)->Void) -> Void
 //  flatMap((JSON)->Result<Int>) -> Result<Int>

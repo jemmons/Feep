@@ -2,13 +2,13 @@ import Foundation
 
 
 
-public func curry<T,U,V>(_ ƒ: @escaping (T,U)->V) -> (T) -> (U) -> V {
-  return { t in
-    return { u in
-      return ƒ(t, u)
-    }
-  }
-}
+//public func curry<T,U,V>(_ ƒ: @escaping (T, U)->V) -> (T) -> (U) -> V {
+//  return { t in
+//    return { u in
+//      return ƒ(t, u)
+//    }
+//  }
+//}
 
 
 
