@@ -1,7 +1,6 @@
 import XCTest
 import Foundation
 import BlueLine
-import Overture
 import Feep
 
 
@@ -46,7 +45,7 @@ class FeepTests: XCTestCase {
   
   
   func testFlip() {
-    let subject = Overture.flip(curry(String.init(data:encoding:)))
+    let subject = flip(curry(String.init(data:encoding:)))
     T(subject is (String.Encoding)->(Data)->String?)
     
     let data = Data("foo".utf8)
@@ -55,7 +54,7 @@ class FeepTests: XCTestCase {
   
   
   func testZurry() {
-    let subject = Overture.zurry("foo".uppercased)
+    let subject = zurry("foo".uppercased)
     T(subject is String)
     EQ(subject, "FOO")
   }

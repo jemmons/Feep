@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BlueLine",
+        "repositoryURL": "https://github.com/jemmons/BlueLine.git",
+        "state": {
+          "branch": null,
+          "revision": "73c87049dbcb65928379f8bb5ab4e6ce310d9cd8",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
